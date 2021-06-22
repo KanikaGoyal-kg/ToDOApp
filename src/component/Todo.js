@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import todo from '../Images/todo.png';
 import "../App.css";
 
 
 const Todo = () => {
+
+    const [inputData, setInputData] = useState();
+    const [items, setItems] = useState([]);
+
+    const addItem = () => {
+        if (!inputData) {
+
+        } else {
+        setItems([...items, inputData]);
+        setInputData('')
+    }
+    }
 
     return (
 
@@ -16,8 +28,11 @@ const Todo = () => {
                 </figure>
 
                 <div className="addItems">
-                    <input type="text" placeholder=" ✍️ Add Items..." />
-                    <i className="fa fa-plus add-btn" title="Add Item"></i>
+                    <input type="text" placeholder=" ✍️ Add Items..." 
+                        value={inputData}
+                        onChange={(e) => setInputData(e.target.value)}
+                    />
+                    <i className="fa fa-plus add-btn" title="Add Item" onClick={addItem}></i>
                 </div>
                 <div className="showItems">
                     <div className="eachItem">
