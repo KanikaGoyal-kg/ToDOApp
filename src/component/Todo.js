@@ -18,7 +18,7 @@ const Todo = () => {
     }
 
     const DeleteItem = (id) => {
-        const updateItems = items.filter((elem, ind) => {
+        const updateItems = items.filter((value, ind) => {
             return ind !== id;
         })
         setItems(updateItems);
@@ -46,7 +46,7 @@ const Todo = () => {
                     return (
                         <div key={ind} className="eachItem">
                         <h3>{value}</h3>
-                        <i className="fa fa-trash add-btn" title="Delete Item" onClick={DeleteItem}></i>
+                        <i className="fa fa-trash add-btn" title="Delete Item" onClick={() => DeleteItem(ind)}></i>
                     </div>
                     )
                 })}
