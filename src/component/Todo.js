@@ -35,10 +35,15 @@ const Todo = () => {
                     <i className="fa fa-plus add-btn" title="Add Item" onClick={addItem}></i>
                 </div>
                 <div className="showItems">
-                    <div className="eachItem">
-                        <h3>Apple</h3>
+                {items.map((value, ind) => {
+                    return (
+                        <div key={ind} className="eachItem">
+                        <h3>{items}</h3>
                         <i className="fa fa-trash add-btn" title="Delete Item"></i>
                     </div>
+                    )
+                })}
+                  
                 </div>
 
                 {/* clear all button */}
