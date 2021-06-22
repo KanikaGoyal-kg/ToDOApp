@@ -19,6 +19,20 @@ const Todo = () => {
                     <input type="text" placeholder=" ✍️ Add Items..." />
                     <i className="fa fa-plus add-btn" title="Add Item"></i>
                 </div>
+                <div className="showItems">
+                    <div className="eachItem">
+                        <h3>Apple</h3>
+                        <i className="fa fa-trash add-btn" title="Delete Item"></i>
+                    </div>
+                </div>
+
+                {/* clear all button */}
+
+                <div className="showItems">
+                    <button className="btn effect04" data-sm-link-text="Remove All">
+                        <span>CHECK LIST</span>
+                    </button>
+                </div>
             </div>
         </div>
         </>
