@@ -12,8 +12,9 @@ const Todo = () => {
         if (!inputData) {
 
         } else {
-        setItems([...items, inputData]);
-        setInputData('')
+            const allInputData = { id: new Date().getTime().toString(), name: inputData }
+            setItems([...items, allInputData]);
+            setInputData('')
     }
     }
 
@@ -46,10 +47,10 @@ const Todo = () => {
                     <i className="fa fa-plus add-btn" title="Add Item" onClick={addItem}></i>
                 </div>
                 <div className="showItems">
-                {items.map((value, ind) => {
+                {items.map((value) => {
                     return (
-                        <div key={ind} className="eachItem">
-                        <h3>{value}</h3>
+                        <div key={value.id} className="eachItem">
+                        <h3>{value.name}</h3>
                         <i className="fa fa-trash add-btn" title="Delete Item" onClick={() => DeleteItem(ind)}></i>
                     </div>
                     )
