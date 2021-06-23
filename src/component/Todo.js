@@ -18,6 +18,10 @@ const Todo = () => {
     }
     }
 
+    const editItem = () => {
+
+    }
+
     const DeleteItem = (index) => {
         const updateItems = items.filter((value) => {
             return index !== value.id;
@@ -51,7 +55,10 @@ const Todo = () => {
                     return (
                         <div key={value.id} className="eachItem">
                         <h3>{ value.name }</h3>
-                        <i className="fa fa-trash add-btn" title="Delete Item" onClick={() => DeleteItem(value.id)}></i>
+                        <div className="todo-btn">
+                            <i className="fa fa-edit add-btn" title="Edit Item" onClick={() => editItem(value.id)}></i>
+                            <i className="fa fa-trash add-btn" title="Delete Item" onClick={() => DeleteItem(value.id)}></i>
+                        </div>
                     </div>
                     )
                 })}
