@@ -37,7 +37,6 @@ const Todo = () => {
         let newEditItems = items.find((elem) => {
             return elem.id === id;
         })
-        console.log(newEditItems)
         setToggleSubmit(false);
         setInputData(newEditItems.name)
         setIsEditItem(id)
