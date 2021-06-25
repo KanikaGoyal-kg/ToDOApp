@@ -13,7 +13,20 @@ const Todo = () => {
     const addItem = () => {
         if (!inputData) {
 
-        } else {
+        } else if(inputData && !toggleSubmit) {
+            setItems(
+                items.map((elem) => {
+                    if(elem.id === isEditItem) {
+                        return{...elem, name:inputData}
+                    }
+                    return elem;
+                })
+            )
+            setToggleSubmit(true);
+            setInputData('');
+            setIsEditItem(null);
+        }
+         else {
             const allInputData = { id: new Date().getTime().toString(), name: inputData }
             setItems([...items, allInputData]);
             setInputData('')
