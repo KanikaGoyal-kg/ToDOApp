@@ -8,6 +8,7 @@ const Todo = () => {
     const [inputData, setInputData] = useState();
     const [items, setItems] = useState([]);
     const [toggleSubmit, setToggleSubmit] = useState(true);
+    const [isEditItem, setIsEditItem] = useState(null);
 
     const addItem = () => {
         if (!inputData) {
@@ -24,6 +25,9 @@ const Todo = () => {
             return elem.id === id;
         })
         console.log(newEditItems)
+        setToggleSubmit(false);
+        setInputData(newEditItems.name)
+        setIsEditItem(id)
     }
 
     const DeleteItem = (index) => {
@@ -53,7 +57,7 @@ const Todo = () => {
                         onChange={(e) => setInputData(e.target.value)}
                     />
                     {toggleSubmit ? <i className="fa fa-plus add-btn" title="Add Item" onClick={addItem}></i> : 
-                    <i className="fa fa-edit add-btn" title="Add Item" onClick={addItem}></i>
+                    <i className="fa fa-edit add-btn" title="Update Item" onClick={addItem}></i>
                 }
                 </div>
                 <div className="showItems">
