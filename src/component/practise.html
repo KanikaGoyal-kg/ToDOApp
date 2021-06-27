@@ -38,5 +38,20 @@
            const x = number.map(Math.sqrt);
            document.write(x);
         </script>
+        <br>
+        <p id="demo"></p>
+        <script>
+            var fruits = ["apple", "orange", "cherry"];
+            fruits.forEach(myFunction);
+            function myFunction(item, index) {
+                document.getElementById('demo').innerHTML += index + ":" + item
+            }
+
+        </script>
+        <script>
+              var str = "How are you doing today?";
+  var res = str.split(" ");
+  document.write(res);
+        </script>
     </body>
 </html>
