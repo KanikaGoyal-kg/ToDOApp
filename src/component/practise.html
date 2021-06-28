@@ -1,57 +1,60 @@
 <html>
-    <head>
-        <title></title>
-        <h4>Filter and map method will return a new array</h4>
-    </head>
-    <body>
-        <script>
-            var arr = [20, 10 , 30, 40 , 50 , 60 , 70];
-            const newarr = arr.filter((elem) => {
-                return elem > 50
-            });
-            console.log(newarr)
-        </script>
 
-        <script>
-              const array1 = [
-        { id: "1", name: "a" },
-        { id: "2", name: "b" },
-        { id: "3", name: "c" },
-        { id: "4", name: "d" },
-      ];
-      const array2 = [
-        { id: "2", name: "b" },
-        { id: "3", name: "c" },
-      ];
+<head>
+    <title></title>
+    <h4>Filter and map method will return a new array</h4>
+</head>
 
-      const filterArray = (array1, array2) => {
-          const filtered = array1.filter((el) => {
-              return array2.indexOf(el) === -1
-          })
-          return filtered;
-      };
-      console.log(filterArray(array1, array2))
-        </script>
-        <script>
-            var number = [4, 9, 16, 25];
+<body>
+    <script>
+        var arr = [20, 10, 30, 40, 50, 60, 70];
+        const newarr = arr.filter((elem) => {
+            return elem > 50
+        });
+        console.log(newarr)
+    </script>
 
-           const x = number.map(Math.sqrt);
-           document.write(x);
-        </script>
-        <br>
-        <p id="demo"></p>
-        <script>
-            var fruits = ["apple", "orange", "cherry"];
-            fruits.forEach(myFunction);
-            function myFunction(item, index) {
-                document.getElementById('demo').innerHTML += index + ":" + item
-            }
+    <script>
+        const array1 = [
+            { id: "1", name: "a" },
+            { id: "2", name: "b" },
+            { id: "3", name: "c" },
+            { id: "4", name: "d" },
+        ];
+        const array2 = [
+            { id: "2", name: "b" },
+            { id: "3", name: "c" },
+        ];
 
-        </script>
-        <script>
-              var str = "How are you doing today?";
-  var res = str.split(" ");
-  document.write(res);
-        </script>
-    </body>
+        const filterArray = (array1, array2) => {
+            const filtered = array1.filter((el) => {
+                return array2.indexOf(el) === -1
+            })
+            return filtered;
+        };
+        console.log(filterArray(array1, array2))
+    </script>
+    <script>
+        var number = [4, 9, 16, 25];
+
+        const x = number.map(Math.sqrt);
+        document.write(x);
+    </script>
+    <br>
+    <p id="demo"></p>
+    <script>
+        var fruits = ["apple", "orange", "cherry"];
+        fruits.forEach(myFunction);
+        function myFunction(item, index) {
+            document.getElementById('demo').innerHTML += index + ":" + item
+        }
+
+    </script>
+    <script>
+        var str = "How are you doing today?";
+        var res = str.split(" ");
+        document.write(res);
+    </script>
+</body>
+
 </html>
