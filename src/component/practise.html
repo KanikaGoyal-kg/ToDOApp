@@ -1,122 +1,129 @@
 <html>
-
-<head>
+  <head>
     <title></title>
     <h4>Filter and map method will return a new array</h4>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        var arr = [20, 10, 30, 40, 50, 60, 70];
-        const newarr = arr.filter((elem) => {
-            return elem > 50
+      var arr = [20, 10, 30, 40, 50, 60, 70];
+      const newarr = arr.filter((elem) => {
+        return elem > 50;
+      });
+      console.log(newarr);
+    </script>
+
+    <script>
+      const array1 = [
+        { id: "1", name: "a" },
+        { id: "2", name: "b" },
+        { id: "3", name: "c" },
+        { id: "4", name: "d" },
+      ];
+      const array2 = [
+        { id: "2", name: "b" },
+        { id: "3", name: "c" },
+      ];
+
+      const filterArray = (array1, array2) => {
+        const filtered = array1.filter((el) => {
+          return array2.indexOf(el) === -1;
         });
-        console.log(newarr)
-    </script>
-
-    <script>
-        const array1 = [
-            { id: "1", name: "a" },
-            { id: "2", name: "b" },
-            { id: "3", name: "c" },
-            { id: "4", name: "d" },
-        ];
-        const array2 = [
-            { id: "2", name: "b" },
-            { id: "3", name: "c" },
-        ];
-
-        const filterArray = (array1, array2) => {
-            const filtered = array1.filter((el) => {
-                return array2.indexOf(el) === -1
-            })
-            return filtered;
-        };
-        console.log(filterArray(array1, array2))
+        return filtered;
+      };
+      console.log(filterArray(array1, array2));
     </script>
     <script>
-        var number = [4, 9, 16, 25];
+      var number = [4, 9, 16, 25];
 
-        const x = number.map(Math.sqrt);
-        document.write(x);
+      const x = number.map(Math.sqrt);
+      document.write(x);
     </script>
-    <br>
+    <br />
     <p id="demo"></p>
     <script>
-        var fruits = ["apple", "orange", "cherry"];
-        fruits.forEach(myFunction);
-        function myFunction(item, index) {
-            document.getElementById('demo').innerHTML += index + ":" + item
-        }
-
+      var fruits = ["apple", "orange", "cherry"];
+      fruits.forEach(myFunction);
+      function myFunction(item, index) {
+        document.getElementById("demo").innerHTML += index + ":" + item;
+      }
     </script>
     <script>
-        var str = "How are you doing today?";
-        var res = str.split(" ");
-        document.write(res);
+      var str = "How are you doing today?";
+      var res = str.split(" ");
+      document.write(res);
     </script>
 
     <script>
-      const array = [1,2,1,2,3,4,5,6,7,8,9];
-      const filterArr = array.filter((value, index) => array.indexOf(value) === index );
-      
+      const array = [1, 2, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      const filterArr = array.filter(
+        (value, index) => array.indexOf(value) === index
+      );
+
       console.log(filterArr);
-
     </script>
     <script>
-        const arrName = {
-            "name": "Kanika"
-        }
-        arrName.address = "abc";
+      const arrName = {
+        name: "Kanika",
+      };
+      arrName.address = "abc";
 
-        console.log(arrName);
+      console.log(arrName);
     </script>
     <script>
-        // var name = "Kanika";
-        // console.log(name)
-        // var name = "Kanika";
-        // var name= "Goyal";
-        // name = "Goyal";
-        // console.log(name);
-        // let name = "Kanika";
-        // let name = "Goyal";//will give an error can't redeclare
-        // name = "Goyal"; // give goyal can update the value
-        // const name = "Kanika"
-        // const name = "Goyal" //can't redeclare
-        // name = "Goyal";//can't update
-        // console.log(name);
-        {
-            const a = 5
+      // var name = "Kanika";
+      // console.log(name)
+      // var name = "Kanika";
+      // var name= "Goyal";
+      // name = "Goyal";
+      // console.log(name);
+      // let name = "Kanika";
+      // let name = "Goyal";//will give an error can't redeclare
+      // name = "Goyal"; // give goyal can update the value
+      // const name = "Kanika"
+      // const name = "Goyal" //can't redeclare
+      // name = "Goyal";//can't update
+      // console.log(name);
+      {
+        const a = 5;
         console.log(a);
+      }
+      {
+        const a = 5;
+      }
+      console.log(a);
 
-        };
-        {
-            const a = 5
-        };
+      {
+        let a = 5;
         console.log(a);
-
-        {
-            let a = 5
-        console.log(a);
-
-        }
-        {
-            const a = 5
-        }
-        console.log(a);
-
+      }
+      {
+        const a = 5;
+      }
+      console.log(a);
     </script>
     <script>
-        //How to generate random number
-        const randomArray = [1, 2, 3, 4, 5, 6, 7];
+      //How to generate random number
+      const randomArray = [1, 2, 3, 4, 5, 6, 7];
 
-        const random = Math.floor(Math.random() * randomArray.length);
+      const random = Math.floor(Math.random() * randomArray.length);
 
-        console.log(randomArray[random]);
-
+      console.log(randomArray[random]);
     </script>
-</body>
+    <script>
+      var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        ranNums = [],
+        i = nums.length,
+        j = 0;
 
+      while (i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        ranNums.push(nums[j]);
+        nums.splice(j, 1);
+      }
+      console.log(ranNums);
+    </script>
+  </body>
 </html>
 <!-- 
 var declarations are globally scoped or function scoped while let and const are block scoped.
