@@ -22,6 +22,14 @@
         { id: "2", name: "b" },
         { id: "3", name: "c" },
       ];
+
+      const filterArray = (array1, array2) => {
+          const filtered = array1.filter((data) => {
+              return array2.indexOf(data) === -1;
+          });
+          return filtered;
+      }
+      console.log(filterArray(array1, array2));
     </script>
   </body>
 </html>
