@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Todo from './component/Todo';
-import interview from './interview';
+import Interview from './Interview';
 
 ReactDOM.render(
   <React.StrictMode>
-    <interview />
+    <Interview />
   </React.StrictMode>,
   document.getElementById('root')
 );
