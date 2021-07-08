@@ -5,6 +5,7 @@
 
   <body>
     <script>
+      //Filter one array
       const arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4];
       const filterArr = arr.filter(
         (data, index) => arr.indexOf(data) === index
@@ -12,6 +13,7 @@
       document.write(filterArr);
     </script>
     <script>
+      //filter two arrays
       const array1 = [
         { id: "1", name: "a" },
         { id: "2", name: "b" },
@@ -24,43 +26,110 @@
       ];
 
       const filterArray = (array1, array2) => {
-          const filtered = array1.filter((data) => {
-              return array2.indexOf(data) === -1;
-          });
-          return filtered;
-      }
+        const filtered = array1.filter((data) => {
+          return array2.indexOf(data) === -1;
+        });
+        return filtered;
+      };
       console.log(filterArray(array1, array2));
     </script>
-    <br>
+    <br />
     <script>
-        const array = [
+      //find particular obj from array
+      const array = [
         { id: "1", name: "a" },
         { id: "2", name: "b" },
         { id: "3", name: "c" },
         { id: "4", name: "d" },
-        ];
-        const findObj = array.find((obj) => obj.id === "3");
-        console.log(findObj);
+      ];
+      const findObj = array.find((obj) => obj.id === "3");
+      const indexOfObj = array.indexOf(findObj)
+      console.log(indexOfObj);
+      const newDeleteArray = array.splice(indexOfObj, 1);
+      console.log(findObj);
+      console.log(array);
+      array.push({id:"5", name:'e'})
+      console.log(array);
     </script>
-    <br>
+    <br />
     <script>
-        const hege = ["Cecilie", "Lone"];
-        const stale = ["Emil", "Tobias", "Linus"];
+      //combine two arrays
+      const hege = ["Cecilie", "Lone"];
+      const stale = ["Emil", "Tobias", "Linus"];
 
-        const child = hege.concat(stale)
-        document.write(child);
+      const child = hege.concat(stale);
+      document.write(child);
+    </script>
+    <br />
+    <script>
+      //combine elements
+      const name = ["Kanika", "Kajal", "Ravi", "Ramesh"];
+      const joinname = name.join();
+      document.write(joinname);
+    </script>
+    <br />
+    <script>
+      //fetch out name
+      const person = { name: "kanika", id: "2" };
+      const detail = person.name;
+      document.write(detail);
+    </script>
+    <br />
+    <script>
+      //get -ve value only
+      const numbers = [1, 2, 3, 4, -1, -2, -3, -4];
+      const negative = numbers.filter((a) => {
+        return a < 0;
+      });
+      console.log(negative);
+    </script>
+    <br />
+    <script>
+        //join two objects
+      const obj1 = {
+        name: "John Doe",
+        age: 24,
+      };
+      const obj2 = {
+        title: "Full stack developer",
+        location: "Remote",
+      };
+
+      const data = {...obj1, ...obj2}
+      console.log(data);
     </script>
     <br>
     <script>
-        const name = ["Kanika", "Kajal", "Ravi", "Ramesh"]
-        const joinname = name.join();
-        document.write(joinname);
+        //array convert string
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        const convertToString = fruits.toString();
+        document.write(convertToString);
+        document.write("<br/>");
+        const lastElem = fruits.slice(-1);
+        console.log(lastElem);
     </script>
     <br>
     <script>
-        const person = {"name":"kanika", "id":"2"}
-        const detail = person.name;
-        document.write(detail);
+    
+    const fruitsStr = "Banana";
+    const convertToArray = fruitsStr.split();
+    console.log(convertToArray);
+    </script>
+    <br>
+    <script>
+      const subjects = {
+        makrs: {
+          English: '10',
+          math: '20'
+        }      
+      }
+      console.log(Object.keys(subjects));
+      console.log(Object.values(subjects));
+      console.log(Object.entries(subjects));
+    </script>
+    <br>
+    <script>
+      
     </script>
   </body>
 </html>
