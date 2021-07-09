@@ -4,6 +4,7 @@ const Interview = () => {
 
 
     const [filter, setFiter] = useState();
+    const [twoObj, setTwoObj] = useState();
 
     const arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4];
 
@@ -30,9 +31,16 @@ const Interview = () => {
         const filterArray = arr.filter((value, index) => {return arr.indexOf(value) === index} )
                setFiter(filterArray);
         
-               const dataFromObj = Object.keys(subjects).map((item) => {
-                   console.log(item);
-               });
+        
+          const filtered = array1.filter((item) => {
+            return (array2.indexOf(item));
+          });
+          console.log(filtered)
+
+          // return filtered;
+        setTwoObj(filtered);
+
+        
         
     },[])
 
@@ -44,6 +52,13 @@ const Interview = () => {
                 <h1>{id}</h1>
                 )
             })}
+        </div>
+        <div>
+          {twoObj && twoObj.map((a) => {
+            return (
+              <h1>{a}</h1>
+            )
+          })}
         </div>
         </>
     )
