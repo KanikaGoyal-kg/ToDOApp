@@ -160,5 +160,41 @@
       console.log(ret);
 
     </script>
+    <br>
+    <script>
+      let n = 5;
+      for (let i = 1; i<=n; i++) {
+        for (let j = 0; j < n; j++) {
+          document.write("*");
+        }
+        document.write("</br>")
+      }
+    </script>
+    <br>
+    <script>
+      let a = 5;
+      for(let i = 1; i<=n; i++) {
+        for (let j = 1; j<=i; j++){
+          document.write("*");
+        }
+        document.write("</br>");
+      }
+    </script>
+    <br>
+    <script>
+      let string = ""
+      for (let i = 1; i <= n; i++) {
+        // printing spaces
+        for (let j = 0; j < n - i; j++) {
+          string += " ";
+        }
+        // printing star
+        for (let k = 0; k < i; k++) {
+          string += "*";
+        }
+        string += "<br>";
+      }
+      document.write(`<pre>${string}</pre>`);
+    </script>
   </body>
 </html>
