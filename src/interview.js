@@ -55,8 +55,13 @@ const Interview = () => {
         </div>
         <div>
           {twoObj && twoObj.map((a) => {
+            console.log(a);
             return (
-              <h1>{a}</h1>
+              <>
+              <h1>{a.id} {a.name}</h1>
+              <h1></h1>
+              </>
+
             )
           })}
         </div>
